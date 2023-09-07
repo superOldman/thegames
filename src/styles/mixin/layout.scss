@@ -1,0 +1,75 @@
+@mixin wh-100() {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin w-100() {
+  width: 100%;
+}
+
+@mixin h-100() {
+  height: 100% !important;
+}
+
+@mixin wh-0() {
+  width: 0;
+  height: 0;
+}
+
+@mixin w-0() {
+  width: 0;
+}
+
+@mixin h-0() {
+  height: 0;
+}
+
+/* flex布局相关 */
+@mixin fx() {
+  display: flex;
+}
+
+@mixin fx-c() {
+  display: flex;
+  flex-direction: column; /* 即c */
+}
+
+/* 即不伸缩 */
+@mixin fx-none() {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+/* 在其他为none时 占据全部剩余空间即 full */
+@mixin fx-full() {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+/* 主轴居中 */
+@mixin fx-p-center() {
+  display: flex;
+  justify-content: center;
+}
+
+/* 从轴居中*/
+@mixin fx-s-center() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin fx-ps-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin fx-s-start() {
+  display: flex;
+  align-items: baseline;
+}
+
+@mixin fx-between() {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* 布局 */
+.wh-100 {
+  @include wh-100;
+}
+
+.w-100 {
+  @include w-100;
+}
+
+.h-100 {
+  @include h-100;
+}
+
+.wh-0 {
+  @include wh-0;
+}
+
+.w-0 {
+  @include w-0;
+}
+
+.h-0 {
+  @include h-0;
+}
+
+/* 主轴居中 */
+.fx-p-center {
+  @include fx-p-center;
+}
+
+/* 从轴居中*/
+.fx-s-center {
+  @include fx-s-center;
+}
+
+.fx-s-start {
+  @include fx-s-start;
+}
+
+.fx-ps-center {
+  @include fx-ps-center;
+}
+
+/* flex布局相关 */
+.fx {
+  @include fx;
+}
+.fx.inline {
+  display: inline-flex;
+}
+.fx-w {
+  @include fx;
+  flex-wrap: wrap;
+}
+
+.fx-between {
+  @include fx-between;
+}
+
+.fx-c {
+  @include fx-c;
+}
+
+/* 即不伸缩 */
+.fx-none {
+  @include fx-none;
+}
+
+/* 在其他为none时 占据全部剩余空间即 full */
+.fx-full {
+  @include fx-full;
+}
+
+.fx-full-auto {
+  @include fx-full;
+}
+
+.fx,
+.fx-ps-center:not(.fx-c),
+.fx-p-center:not(.fx-c),
+.fx-s-center:not(.fx-c) {
+  & > .fx-full {
+    width: 0;
+  }
+}
+.fx-c > .fx-full {
+  height: 0;
+}
+
+/* 在右侧 */
+.fx-right {
+  margin-left: auto !important;
+}
+/* 在底部 */
+.fx-bottom {
+  margin-top: auto !important;
+}
+
+.in-fx {
+  display: inline-flex;
+}
+
+.scroll-bar {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #d7d7d7;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
